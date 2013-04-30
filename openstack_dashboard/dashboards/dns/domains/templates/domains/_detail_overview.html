@@ -1,0 +1,22 @@
+{% load i18n parse_date %}
+
+<h3>{% trans "Domain Overview" %}: {{domain.name }}</h3>
+
+<div class="info row-fluid detail">
+  <h4>{% trans "Info" %}</h4>
+  <hr class="header_rule">
+  <dl>
+    <dt>{% trans "ID" %}</dt>
+    <dd>{{ domain.id }}</dd>
+    <dt>{% trans "Name" %}</dt>
+    <dd>{{ domain.name }}</dd>
+    <dt>{% trans "Email" %}</dt>
+    <dd>{{ domain.email }}</dd>
+    <dt>{% trans "Serial" %}</dt>
+    <dd>{{ domain.serial }}</dd>
+    <dt>{% trans "Created" %}</dt>
+    <dd>{{ domain.created_at|parse_date }}</dd>
+    <dt>{% trans "Updated" %}</dt>
+    <dd>{{ domain.updated_at|parse_date }}</dd>
+  </dl>
+</div>
